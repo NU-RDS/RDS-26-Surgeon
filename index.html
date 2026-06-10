@@ -811,7 +811,6 @@
     <a href="#cad" class="btn btn-outline"><i class="fas fa-cube"></i> CAD</a>
     <a href="#demos" class="btn btn-outline"><i class="fas fa-play"></i> Demos</a>
     <a href="#code" class="btn btn-outline"><i class="fab fa-github"></i> Code</a>
-    <a href="static/pdfs/design_review.pdf" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Design Review</a>
   </div>
 </header>
 
@@ -1297,20 +1296,18 @@
     <div class="video-grid">
       <div class="video-card">
         <div class="video-placeholder">
-          <!-- TEAM: Replace with <iframe> or <video> tag -->
           <video
           controls
           width="100%"
           height="100%"
           style="display:block;"
         >
-          <source src="/videos/draw_demo_v.mp4" type="video/quicktime">
-          Your browser does not support the video tag.
+          <source src="videos/draw_l.mp4" type="video/mp4">
         </video>
         </div>
         <div class="video-meta">
           <h4>Drawing Demo - Letter L</h4>
-          <p>Trace trajectory of the letter L on the paper usigng both position and force control.</p>
+          <p>Trace trajectory of the letter L on the paper using both position and force control.</p>
         </div>
       </div>
       <div class="video-card">
@@ -1321,13 +1318,28 @@
           height="100%"
           style="display:block;"
         >
-          <source src="/videos/draw_l.mp4" type="video/quicktime">
-          Your browser does not support the video tag.
+          <source src="videos/draw_s.mp4" type="video/mp4">
         </video>
         </div>
         <div class="video-meta">
-          <h4>Drawing Demo - Letter V</h4>
-          <p>Trace trajectory of the letter V on the paper usigng both position and force control.</p>
+          <h4>Drawing Demo - Letter S</h4>
+          <p>Trace trajectory of the letter S on the paper using both position and force control.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-placeholder">
+          <video
+          controls
+          width="100%"
+          height="100%"
+          style="display:block;"
+        >
+          <source src="videos/shade_demo.mp4" type="video/mp4">
+        </video>
+        </div>
+        <div class="video-meta">
+          <h4>Shading Demo</h4>
+          <p>Shade in a square from dark to light on the paper using both position and force control.</p>
         </div>
       </div>
     </div>
@@ -1341,8 +1353,7 @@
           height="100%"
           style="display:block;"
         >
-          <source src="/videos/PID_CONTROL.mp4" type="video/quicktime">
-          Your browser does not support the video tag.
+          <source src="videos/PID_CONTROL.mp4" type="video/mp4">
         </video>
       </div>
     
@@ -1359,12 +1370,44 @@
             height="100%"
             style="display:block;"
           >
-            <source src="/videos/SIM_WRITE.mp4" type="video/quicktime">
-            Your browser does not support the video tag.
+            <source src="videos/SIM_WRITE.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-meta">
           <h4>Simulation Writing</h4>
+          <p>Using Drake, we use PD Control to follow a trajectory generated that resembles a letter. The workspace in the simulation is larger than reality since the robot can move latterally, so we are able to generate sentences and larger images. </p>
+        </div>
+      <h3 style="font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);margin-top:3rem;margin-bottom:1rem;">Simulation Demos</h3>
+      <div class="video-card">
+        <div class="video-placeholder">
+          <video
+            controls
+            width="100%"
+            height="100%"
+            style="display:block;"
+          >
+            <source src="videos/simulation_shading_demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-meta">
+          <h4>Simulation Shading</h4>
+          <p>Using Drake, we use PD Control to follow a trajectory generated that resembles a letter. The workspace in the simulation is larger than reality since the robot can move latterally, so we are able to generate sentences and larger images. </p>
+        </div>
+      <h3 style="font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);margin-top:3rem;margin-bottom:1rem;">Simulation Demos</h3>
+      <div class="video-card">
+        <div class="video-placeholder">
+          <video
+            controls
+            width="100%"
+            height="100%"
+            style="display:block;"
+          >
+            <source src="videos/simulation_drawing_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-meta">
+          <h4>Simulation Drawing</h4>
           <p>Using Drake, we use PD Control to follow a trajectory generated that resembles a letter. The workspace in the simulation is larger than reality since the robot can move latterally, so we are able to generate sentences and larger images. </p>
         </div>
       
@@ -1466,50 +1509,14 @@
 <section id="code">
   <div class="container">
     <p class="section-label">07 — Software</p>
-    <h2 class="section-title">Control &amp; Simulation Code</h2>
+    <h2 class="section-title">Code</h2>
 
     <div class="code-grid">
 
-      <a href="#" class="code-card">
+      <a href="https://github.com/AileenCleary/RDS-26-Surgeon" class="code-card">
         <i class="fab fa-github"></i>
-        <h4>Control Code</h4>
-        <p>Motor control, encoder reading, impedance control loop, and tendon tension management.</p>
-        <span class="link-tag"><i class="fas fa-external-link-alt"></i> GitHub — link TBD</span>
-      </a>
-
-      <a href="#" class="code-card">
-        <i class="fas fa-robot"></i>
-        <h4>Simulation Code</h4>
-        <p>Kinematic simulation, tendon routing geometry, and force analysis scripts.</p>
-        <span class="link-tag"><i class="fas fa-external-link-alt"></i> GitHub — link TBD</span>
-      </a>
-
-      <a href="#" class="code-card">
-        <i class="fas fa-microchip"></i>
-        <h4>Firmware / PCB Code</h4>
-        <p>Encoder serialization firmware, PCB bring-up scripts, and sensor calibration routines.</p>
-        <span class="link-tag"><i class="fas fa-external-link-alt"></i> GitHub — link TBD</span>
-      </a>
-
-      <a href="#" class="code-card">
-        <i class="fas fa-calculator"></i>
-        <h4>Design Analysis Scripts</h4>
-        <p>Stress analysis, moment of inertia calculations, tendon length geometry, and material comparison scripts.</p>
-        <span class="link-tag"><i class="fas fa-external-link-alt"></i> GitHub — link TBD</span>
-      </a>
-
-      <a href="#" class="code-card">
-        <i class="fas fa-chart-bar"></i>
-        <h4>Data Processing</h4>
-        <p>Test data parsing, plotting scripts, and calibration matrix generation for force sensor.</p>
-        <span class="link-tag"><i class="fas fa-external-link-alt"></i> GitHub — link TBD</span>
-      </a>
-
-      <a href="static/pdfs/design_review.pdf" class="code-card">
-        <i class="fas fa-file-powerpoint"></i>
-        <h4>Design Review Slides</h4>
-        <p>Full prototype design review presentation including all CAD, prototype photos, and iteration history.</p>
-        <span class="link-tag"><i class="fas fa-download"></i> Download PDF</span>
+        <h4>Code</h4>
+        <span class="link-tag"><i class="fas fa-external-link-alt"></i> View on GitHub</span>
       </a>
 
     </div>
